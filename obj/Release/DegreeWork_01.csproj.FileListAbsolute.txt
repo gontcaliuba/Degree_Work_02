@@ -1,0 +1,10 @@
+G:\University\DegreeWork_01\DegreeWork_01\bin\Release\DegreeWork_01.exe.config
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\Interop.SKYPE4COMLib.dll
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\DegreeWork_01.csproj.ResolveComReference.cache
+G:\University\DegreeWork_01\DegreeWork_01\bin\Release\DegreeWork_01.exe
+G:\University\DegreeWork_01\DegreeWork_01\bin\Release\DegreeWork_01.pdb
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\DegreeWork_01.Properties.Resources.resources
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\DegreeWork_01.csproj.GenerateResource.Cache
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\DegreeWork_01.exe
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\DegreeWork_01.pdb
+G:\University\DegreeWork_01\DegreeWork_01\obj\Release\DegreeWork_01.csprojResolveAssemblyReference.cache
