@@ -13,7 +13,16 @@ namespace DegreeWork_01
         public TownsDatabase(string filename)
         {
             XmlDocument xml = new XmlDocument();
-            xml.Load("Cities.xml");
+            xml.Load(filename);
+
+            XmlNodeList cityList = xml.GetElementsByTagName("City");
+            for (int i = 0; i < cityList.Count; i++)
+            {
+                string cityName = cityList[i].LastChild.InnerText;
+                int cityId = Int32.Parse(cityList[i].FirstChild.InnerText);
+                if (dict.ContainsKey(cityName) == true) continue;
+                dict.Add(cityName, cityId);                
+            }
 
         }
 
