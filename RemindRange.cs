@@ -14,9 +14,8 @@ namespace DegreeWork_01
 
         public RemindRange()
         {
-            remindList = null;
-        }
 
+        }
         public RemindRange(string xmlName)
         {
             RemindRange listFromXml = xml.readXML(xmlName);
@@ -37,6 +36,16 @@ namespace DegreeWork_01
             if (id < 0) return;
             if (id >= remindList.Count) return;
             remindList.RemoveAt(id);
+        }
+
+        public string extractLastMessage()
+        {
+            return remindList[remindList.Count - 1].message;
+        }
+
+        public DateTime extractLastDateAndTime()
+        {
+            return remindList[remindList.Count - 1].dateTime;
         }
     }
 }

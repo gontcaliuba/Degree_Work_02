@@ -28,8 +28,8 @@ namespace DegreeWork_01
 
         public int getCityId(string cityName)
         {
-            if (dict.ContainsKey(cityName) == false) return -1;
-            return dict[cityName];
+            if (dict.ContainsKey(cityName)) return dict[cityName];
+            return -1;
         }
     }
 }

@@ -14,9 +14,10 @@ namespace DegreeWork_01
             Process.Start(link);
         }
 
-        public void openForecast(string link)
+        public void openForecast()
         {
-            startProcess(link);
+            WeatherControl weatherControl = new WeatherControl();
+            startProcess(weatherControl.getLinkForForcast());
         }
 
         public void openCalendar()

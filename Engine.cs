@@ -11,11 +11,11 @@ namespace DegreeWork_01
         SkypeControl skypeControl = new SkypeControl();
         BrowserControl browserControl = new BrowserControl();
         SystemControl systemControl = new SystemControl();
-        RemindRange remindRange = new RemindRange();
+        RemindRange remindRange = new RemindRange("Reminds.xml");
 
         public void commandsHandler(string command)
         {
-            switch(command)
+            switch(command.ToLower())
             {
                  // Взаимодействия с системой
 
@@ -58,7 +58,7 @@ namespace DegreeWork_01
                     }
                 case "открыть погоду":
                     {
-                        
+                        browserControl.openForecast();   
                         break;
                     }
 
@@ -66,6 +66,7 @@ namespace DegreeWork_01
 
                 case "добавить напоминание":
                     {
+
                         break;
                     }
                 case "удалить напоминание":
@@ -86,10 +87,14 @@ namespace DegreeWork_01
                     }
                 case "позвонить":
                     {
+                        Form2 formContacts = new Form2();
+                        formContacts.ShowDialog();
                         break;
                     }
                 case "видеозвонок":
                     {
+                        Form2 formContacts = new Form2();
+                        formContacts.ShowDialog();
                         break;
                     }
 

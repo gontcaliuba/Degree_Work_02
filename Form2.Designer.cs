@@ -30,10 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ContactsTable = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Name = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.ContactsTable)).BeginInit();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -54,36 +51,25 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "осуществить голосовой вызов, из списка:";
             // 
-            // ContactsTable
+            // richTextBox1
             // 
-            this.ContactsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ContactsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Name});
-            this.ContactsTable.Location = new System.Drawing.Point(15, 80);
-            this.ContactsTable.Name = "ContactsTable";
-            this.ContactsTable.Size = new System.Drawing.Size(244, 159);
-            this.ContactsTable.TabIndex = 3;
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            // 
-            // Name
-            // 
-            this.Name.HeaderText = "Имя пользователя";
-            this.Name.Name = "Name";
-            this.Name.ReadOnly = true;
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.Location = new System.Drawing.Point(32, 50);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(273, 367);
+            this.richTextBox1.TabIndex = 3;
+            this.richTextBox1.Text = "";
             // 
             // Form2
             // 
-            this.ClientSize = new System.Drawing.Size(284, 262);
-            this.Controls.Add(this.ContactsTable);
+            this.ClientSize = new System.Drawing.Size(338, 429);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-           // this.Name = "";
-            ((System.ComponentModel.ISupportInitialize)(this.ContactsTable)).EndInit();
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
+            this.Name = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,8 +79,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView ContactsTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Name;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
