@@ -21,8 +21,6 @@ G:\University\Degree_work\DegreeWork_01\DegreeWork_01\obj\Debug\DegreeWork_01.Fo
 G:\University\Degree_work\DegreeWork_01\DegreeWork_01\obj\Debug\DegreeWork_01.Properties.Resources.resources
 G:\University\Degree_work\DegreeWork_01\DegreeWork_01\obj\Debug\DegreeWork_01.csproj.GenerateResource.Cache
 G:\University\Degree_work\DegreeWork_01\DegreeWork_01\bin\Debug\NAudio.dll
-G:\University\Degree_work\DegreeWork_01\DegreeWork_01\bin\Debug\CUETools.Codecs.dll
-G:\University\Degree_work\DegreeWork_01\DegreeWork_01\bin\Debug\CUETools.Codecs.FLAKE.dll
 G:\University\Degree_work\DegreeWork_01\DegreeWork_01\bin\Debug\Newtonsoft.Json.dll
 G:\University\Degree_work\DegreeWork_01\DegreeWork_01\obj\Debug\DegreeWork_01.Form2.resources
 G:\University\Degree_work\DegreeWork_01\DegreeWork_01\obj\Debug\DegreeWork_01.Form3.resources

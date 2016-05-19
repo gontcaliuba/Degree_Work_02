@@ -20,11 +20,16 @@ namespace DegreeWork_01
         WaveFileWriter writer;
         //Имя файла для записи
         string outputFilename = "01.wav";
+        bool isRecording = false;
 
         public Form1()
         {
             InitializeComponent();
+            this.KeyDown += Form1_KeyDown;
+            this.KeyUp += Form1_KeyUp;
         }
+
+
         //Получение данных из входного буфера и обработка полученных с микрофона данных
         void waveIn_DataAvailable(object sender, WaveInEventArgs e)
         {
@@ -63,8 +68,9 @@ namespace DegreeWork_01
             }
         }
         //Начинаем запись
-        private void button1_Click(object sender, EventArgs e)
+        private void start()
         {
+            isRecording = true;
             try
             {
                 //MessageBox.Show("Start Recording");
@@ -87,12 +93,30 @@ namespace DegreeWork_01
         }
 
         //Прерываем запись
-        private void button2_Click_1(object sender, EventArgs e)
+        private void stop()
         {
             if (waveIn != null)
             {
                 StopRecording();
+                isRecording = false;
             }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData != Keys.Space) return;
+            if (isRecording == true) return;
+            Image myimage = new Bitmap("isRecording.jpg");
+            this.BackgroundImage = myimage;
+            start();
+        }
+
+        void Form1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData != Keys.Space) return;
+            Image myimage = new Bitmap("isntRecording.jpg");
+            this.BackgroundImage = myimage;
+            stop();
         }
     }
 }
