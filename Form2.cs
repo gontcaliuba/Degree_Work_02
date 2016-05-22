@@ -10,6 +10,7 @@ namespace DegreeWork_01
 {
     public partial class Form2 : Form
     {
+        bool isRecording = false;
         public Form2()
         {
             InitializeComponent();
@@ -20,13 +21,31 @@ namespace DegreeWork_01
             for (int i = 0; i < contacts.Count; i++)
             {
                 contactList += contacts[i].getID().ToString() + "   " + contacts[i].getName() + "\n";
-                /*
-                ContactsTable.Rows.Add();
-                ContactsTable.Rows[i].Cells[0].Value = contacts[i].getID();
-                ContactsTable.Rows[i].Cells[1].Value = contacts[i].getName();
-                 * */
             }
             richTextBox1.Text = contactList;
+
+            richTextBox1.KeyDown += Form2_KeyDown;
+            richTextBox1.KeyUp += Form2_KeyUp;
+
+            this.KeyDown += Form2_KeyDown;
+            this.KeyUp += Form2_KeyUp;
+        }
+
+        private void Form2_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData != Keys.Space) return;
+            if (isRecording == true) return;
+            Image myimage = new Bitmap("isRecording_02.jpg");
+            this.BackgroundImage = myimage;
+            isRecording = true;
+        }
+
+        void Form2_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData != Keys.Space) return;
+            Image myimage = new Bitmap("isntRecording_02.jpg");
+            this.BackgroundImage = myimage;
+            isRecording = false;
         }
     }
 }

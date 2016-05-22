@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.RemindMessage = new System.Windows.Forms.RichTextBox();
             this.dateAndTime = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
@@ -36,6 +37,7 @@
             // 
             this.RemindMessage.Location = new System.Drawing.Point(43, 91);
             this.RemindMessage.Name = "RemindMessage";
+            this.RemindMessage.ReadOnly = true;
             this.RemindMessage.Size = new System.Drawing.Size(194, 141);
             this.RemindMessage.TabIndex = 0;
             this.RemindMessage.Text = "";
@@ -49,7 +51,8 @@
             // 
             // Form3
             // 
-            this.ClientSize = new System.Drawing.Size(284, 262);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(444, 262);
             this.Controls.Add(this.dateAndTime);
             this.Controls.Add(this.RemindMessage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

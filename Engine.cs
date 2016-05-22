@@ -15,6 +15,7 @@ namespace DegreeWork_01
 
         public void commandsHandler(string command)
         {
+            if (command == null) return;
             switch(command.ToLower())
             {
                  // Взаимодействия с системой
@@ -75,12 +76,12 @@ namespace DegreeWork_01
                     }
 
                     //Взаимодействия со скайпом
-                case "открыть Skype":
+                case "открыть skype":
                     {
                         skypeControl.startSkype();
                         break;
                     }
-                case "Закрыть Skype":
+                case "закрыть skype":
                     {
                         skypeControl.stopSkype();
                         break;

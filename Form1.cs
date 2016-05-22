@@ -63,8 +63,12 @@ namespace DegreeWork_01
                 waveIn = null;
                 writer.Close();
                 writer = null;
+
                 var stream = new MemoryStream(File.ReadAllBytes("01.wav"));
                 string result = SpeechRecognizer.WavStreamToGoogle(stream);
+                string command = JsonWorker.Convert(result);
+                Engine eng = new Engine();
+                eng.commandsHandler(command);
             }
         }
         //Начинаем запись
